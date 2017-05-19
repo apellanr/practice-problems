@@ -12,11 +12,19 @@
         // takes in param { string }
 
         function middleOfString(str) {
-
+            var mid = str.length / 2;
+            var letters = '';
+            if(str.length % 2 !== 0) {
+                var flooredIndex = Math.floor(mid);
+                letters = str.slice(flooredIndex, flooredIndex + 1);
+            } else {
+                letters = str.slice(mid - 1, mid + 1);
+            }
+            return letters;
         }
 
-        console.log("test 1: ", middleOfString("seven"));
-        console.log("test 2: ", middleOfString("dish"));
+        console.log("test 1: ", middleOfString("seven")); // 'v'
+        console.log("test 2: ", middleOfString("dish")); // 'is'
     </script>
 </head>
 <body>
