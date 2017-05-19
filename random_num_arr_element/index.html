@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Random Num & Arr Element</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function randomRange(startNum, endNum) {
+            var min = startNum;
+            var range = (endNum - startNum) + 1;
+            var randomArrElement = startNum[Math.floor(Math.random() * startNum.length)];
+            if(endNum !== undefined) {
+                return Math.floor(Math.random() * range) + min;
+            } else {
+                return randomArrElement;
+            }
+        }
+            console.log(randomRange(2,15)); // returns 7
+            console.log(randomRange(1, 100)); // returns 85
+        console.log(randomRange(['a','b','c','d','e'])); // b
+    </script>
+</head>
+<body>
+    <h1>Random Number or Array Element</h1>
+</body>
+</html>
