@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Invert Positive Number</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // -Math.abs() to convert to negative number
+        // check if input is a negative number - if so, leave input value
+        // if input is not a number, return false
+
+        function invertNegatives(input){
+            if(isNaN(input)) return false;
+            return input < 0 ? input : -(input);
+        }
+        console.log(invertNegatives(-5)); // -5
+        console.log(invertNegatives(4000)); // -4000
+        console.log(invertNegatives('puppies')); // false
+    </script>
+</head>
+<body>
+
+</body>
+</html>
