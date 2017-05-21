@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Array Reverser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // take an array param and reverse it
+        var newArr = [];
+
+        function arrReverse(array) {
+            var arr = array;
+            var mid = Math.floor(arr.length / 2);
+            var sideOne = arr.splice(0, mid).reverse();
+            var sideTwo = arr.splice(0, arr.length).reverse();
+            newArr = sideTwo.concat(sideOne);
+            return newArr;
+        }
+
+        var arr1 = ['hello', 45, 'Bob', 'what', '23']; // ['23', 'what', 'Bob', 45, 'hello']
+        console.log(arrReverse(arr1));
+    </script>
+</head>
+<body>
+    <h1>Array Reverser</h1>
+</body>
+</html>
