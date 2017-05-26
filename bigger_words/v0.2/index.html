@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bigger Words v0.2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function biggerWords(str, array) {
+            var bigArr = array.filter((word) => word.length > str.length);
+            return bigArr;
+        }
+
+        var arr = ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles'];
+        biggerWords('whales', arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
