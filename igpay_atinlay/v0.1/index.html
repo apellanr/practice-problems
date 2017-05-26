@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Igpay Atinlay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var vowels = ['a', 'e', 'i','o','u'];
+
+        function pigLatin(str) {
+            var igpayArr = [];
+            var wordArr = str.toLowerCase().split(" ");
+            console.log(wordArr);
+            for(var i = 0; i < wordArr.length; i++) {
+                var firstLett = wordArr[i].slice(0,1);
+                var restOfWord = wordArr[i].substr(1);
+                if(vowels.indexOf(firstLett) === -1) { // checks to see if first letter is a vowel
+                    igpayArr.push(restOfWord + firstLett + "ay");
+                } else { // if it is push back original word
+                    igpayArr.push(wordArr[i] +  "ay");
+                }
+            }
+            return igpayArr.join(' ');
+        }
+
+        console.log(pigLatin("Hello my name is Stu"));
+        console.log(pigLatin("Hello there"));
+
+
+    </script>
+</head>
+<body>
+    <h1>Igpay Atinlay</h1>
+</body>
+</html>
