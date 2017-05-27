@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Numeric Spirals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // one param and prints out fib seq
+        /*
+         Output
+         0 1
+         0 1 1
+         0 1 1 2
+         */
+
+        function fibSeq(value) {
+            var fibArr = [0, 1];
+            for(var i = 2; i < value; i++) {
+                fibArr.push(fibArr[fibArr.length - 2] + fibArr[fibArr.length -1]);
+            }
+            return fibArr;
+        }
+        console.log(fibSeq(12)); // 0 1 1 2 3 5 8 13 21 34 55 89
+    </script>
+</head>
+<body>
+
+</body>
+</html>
