@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Randomize Array</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // pass in an array to function randomizeList
+        // creates variables to find arr.length, save index position of element target, temp
+        // will keep shuffling array until reaching array length
+        // run time O(n) - goes through the whole array
+
+        var array1 = ['Hello','Bonjour','Hallo','Olà','Ciao','Hola'];
+
+        function randomizeList(arr) {
+            var i = 0,
+                j = 0,
+                element = null;
+
+            for(i = arr.length - 1; i > 0; i-= 1) { // i will be length of array and will decrement
+                j = Math.floor(Math.random() * (i + 1)); // assigns target index position
+                element = arr[i]; // specified value will be saved in element variable
+                arr[i] = arr[j]; // value of arr[i] will replace arr[j] value
+                arr[j] = element; // arr[j] value will become stored element value
+            }
+            return arr;
+        }
+        console.log(randomizeList(array1));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
