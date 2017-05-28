@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Array Sort</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    /*
+    - build a function that takes in an array of strings and outputs
+      a new array with the strings in alphabetical order
+
+     Example: var myArray = ['mouse', 'cat', 'dog', 'human'];
+        sort(myArray);
+        Output - ['cat', 'dog', 'human', 'mouse']
+     */
+
+    var animalArr = ['lion', 'cat', 'dog', 'zebra', 'panther', 'flamingo'];
+
+    // bubble sort
+    function arrSort(arr) {
+        var len = arr.length;
+        for(var i = len - 1; i >= 0; i -= 1) { // will start at the end of the arr
+            for(j = 1; j <= i; j++) { // starts at pos. 1 and will loop through arr
+                if(arr[j-1] > arr[j]) { // conditional to check if left side value is greater than right value
+                    var temp = arr[j-1]; // saves element of left pos.
+                    arr[j-1] = arr[j]; // reassigns value of arr[j-1] to arr[j] value
+                    arr[j] = temp; // index [j] becomes saved element
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log(arrSort(animalArr));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
