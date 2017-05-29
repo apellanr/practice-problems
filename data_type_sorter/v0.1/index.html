@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Data Sorter v0.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var dataArr = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+        var sortedArr = [], stringArr = [], numArr = [], booleanArr = [];
+
+        function groupArray(arr) {
+            for(var i = 0; i < arr.length; i++){
+                if(typeof arr[i] === "string") {
+                    stringArr.push(arr[i]);
+                } else if(typeof arr[i] === "number") {
+                    numArr.push(arr[i]);
+                } else {
+                   booleanArr.push(arr[i]);
+                }
+            }
+            sortedArr.push(stringArr, numArr, booleanArr);
+            return sortedArr;
+        }
+
+        console.log(groupArray(dataArr));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
