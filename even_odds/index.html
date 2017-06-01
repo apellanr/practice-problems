@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Even Odds v0.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var numObj = {};
+
+        function evenOdds(arr){
+            var odd = numObj.odd = [];
+            var even = numObj.even = [];
+            var sortArr = arr.slice().sort();
+            for(var i = 0; i < sortArr.length; i++){
+                if(sortArr[i] === sortArr[i + 1]) {
+                    sortArr.splice(i, 1);
+                }
+            }
+            for(var j = 0; j < sortArr.length; j++) {
+                if(isNaN(sortArr[j])) sortArr.splice(j,1); // if array value is not a number slice out;
+                if(sortArr[j] % 2 === 1) {
+                    odd.push(sortArr[j]);
+                } else if(sortArr[j] % 2 === 0) {
+                    even.push(sortArr[j]);
+                }
+            }
+            return numObj;
+        }
+
+        var testArr = ['dog',2,5,2,20,'cat',13,5,3];
+        console.log(evenOdds(testArr));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
