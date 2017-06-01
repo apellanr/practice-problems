@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Skippy Numbers v0.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function skippyNum(num){
+            var arr = [num];
+            for(var i = 0; arr.length < 8; i++){
+                if(i % num === 0) {
+                    arr.push(arr[i] + 1);
+                } else {
+                    arr.push(arr[i] + num);
+                }
+            }
+            return arr;
+        }
+        console.log(skippyNum(2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
