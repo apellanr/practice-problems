@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math Computation Seq v0.2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var op = ['+', '-', '*', '/'];
+        function compSequences(num1, num2){
+            var result = null;
+            var resultArr = [];
+            for(var i = 0; i < op.length; i++){
+                switch(op[i]){
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break;
+                }
+                var compute = '' + num1 + op[i] + num2 + "=" + result;
+                resultArr.push(compute);
+            }
+            return resultArr;
+        }
+
+        console.log(compSequences(3,5));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
