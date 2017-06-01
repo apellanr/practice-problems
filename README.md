@@ -25,7 +25,7 @@
 - <a href="array_add/README.md" target="_blank">Array Add</a>
 - <a href="search_arr/README.md" target="_blank">Search Array</a>
 
-### Levle 3
+### Level 3
 - <a href="char_convert/README.md" target="_blank">Char Convert</a>
 - <a href="math_sequence/README.md" target="_blank">Math Sequence</a>
 - <a href="array_factors/README.md" target="_blank">Array Factors</a>
