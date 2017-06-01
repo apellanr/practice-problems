@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Math Comp Sequences v0.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var result;
+
+        function mathSequences(num1, num2) {
+            var computationArr = [];
+            var mathObj = {
+                add : num1 + num2,
+                subtract : num1 - num2,
+                mult : num1 * num2,
+                divide : num1 / num2
+            }
+
+            if(num1 && num2 !== undefined){
+                computationArr.push(num1 + "+" + num2 + "=" + mathObj.add);
+                computationArr.push(num1 + "-" + num2 + "=" + mathObj.subtract);
+                computationArr.push(num1 + "*" + num2 + "=" + mathObj.mult);
+                computationArr.push(num1 + "/" + num2 + "=" + mathObj.divide);
+            }
+            return computationArr;
+         }
+
+        console.log(mathSequences(2,5)); //["2+5=7", "2-5=-3", "2*5=10", "2/5=0.4"];
+    </script>
+</head>
+<body>
+
+</body>
+</html>
