@@ -41,16 +41,7 @@
 - <a href="factor_of_sequence/README.md" target="_blank">Factor of Sequence</a>
 
 ### Level 6
-- none available
-
-### Level 7
-- none available
-
-### Level 8
-- none available
-
-### Level 9
 - <a href="calculate_multi_average/README.md" target="_blank">Calculate Multi Average</a>
 
-### Level 10
+### Level 7
 - <a href="recursive_numeric_spirals/README.md" target="_blank">Recursive Numeric Spirals</a>
